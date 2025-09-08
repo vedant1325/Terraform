@@ -13,7 +13,7 @@ resource "aws_instance" "MyInstance" {
      }
 }
 
-resource "aws_security-group" "my_sg" {
+resource "aws_security_group" "my_sg" {
      name        = "my-security-group"
      description = "Allow SSH and HTTP and 8080"
 
