@@ -7,7 +7,7 @@ resource "aws_instance" "MyInstance" {
      ami = "ami-0c4a668b99e68bbde"
     instance_type = "t2.micro"
     key_name = "serverkp"
-    vpc_security_group_ids = ["sg-01e29a8691de24a5f",aws_security-group.my_sg.id]
+    vpc_security_group_ids = ["sg-01e29a8691de24a5f",aws_security_group.my_sg.id]
      tags = {
     Name = "MyExampleInstance"
      }
