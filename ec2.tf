@@ -14,16 +14,3 @@ resource "aws_instance" "example" {
   
 }
 
-#Output Block
-output "publicIp"{
-  value=aws_instance.example.public_ip
-}
-output "publicDns"{
-  value=aws_instance.example.public_dns
-}
-output "privateIp"{
-  value=aws_instance.example.private_ip
-} 
-output "tags"{
-  value=aws_instance.example.tags
-}
