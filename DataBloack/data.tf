@@ -1,3 +1,4 @@
+    #Creating a ec2 instance using available vpc,subnet and security group using data block
 provider "aws"{
     region="ap-south-1"
     profile="configs"
@@ -14,7 +15,7 @@ data "aws_subnet" "sb"{
     }
 }
 
-resource "aws_instance" "example" {
+resource "aws_instance" "ec2Instance" {
     ami = "ami-0c4a668b99e68bbde"
     instance_type = "t2.micro"
 
@@ -30,11 +31,7 @@ resource "aws_instance" "example" {
 
 
 
-data "aws_security_group" "ex"{
-    tags={
-        name="mywebgroup"
-    }
-}
+
 
 output "sg_id" {
     value = data.aws_security_group.ex.id
