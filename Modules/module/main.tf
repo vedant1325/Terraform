@@ -2,11 +2,12 @@ module "ec2"{
 
 source="/home/vedant/Terraform/Modules/resources/ec2"
 This_ami="ami-0c4a668b99e68bbde"
-instance_type="t2.micro"
+instance_type="t3.micro"
 keypair="serverkp"
 subnetId=module.aws_vpc.subnet_id
 scg=["sg-01e29a8691de24a5f"]
-az="ap-south-1"
+az="ap-south-1a"
+vpc_id=module.aws_vpc.vpc_id
 }
 
 module "aws_vpc"{

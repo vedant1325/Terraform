@@ -16,3 +16,6 @@ variable "subnetId" {
 variable "az" {
   
 }
+variable "vpc_id" {
+  
+}
