@@ -12,6 +12,7 @@ module "aws_vpc"{
 source="/home/vedant/Terraform/Modules/resources/vpc"
 vpc_cidr="192.168.0.0/16"
 Vpc_name="My_VPC"
+subnet_cidr="192.168.0.0/17"
 map_public_ip=true
 subnet_name="My_Subnet"
 }
