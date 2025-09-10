@@ -1,5 +1,6 @@
 resource "aws_instance" "MyWebServer" {
     ami =var.This_ami
+    availability_zone = var.az
     instance_type = var.instance_type
     tags = {
         Name = "Webserver"

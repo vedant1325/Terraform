@@ -13,3 +13,6 @@ variable "instance_type" {
 variable "subnetId" {
   
 }
+variable "az" {
+  
+}

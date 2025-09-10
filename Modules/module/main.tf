@@ -6,6 +6,7 @@ instance_type="t2.micro"
 keypair="serverkp"
 subnetId=module.aws_vpc.subnet_id
 scg=["sg-01e29a8691de24a5f"]
+az="ap-south-1"
 }
 
 module "aws_vpc"{
