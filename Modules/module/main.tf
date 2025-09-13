@@ -5,7 +5,7 @@ This_ami="ami-0c4a668b99e68bbde"
 instance_type="t3.micro"
 keypair="serverkp"
 subnetId=module.aws_vpc.subnet_id
-scg=["sg-01e29a8691de24a5f"]
+scg=["sg-0b203e32efe6caf31"]
 az="ap-south-1a"
 vpc_id=module.aws_vpc.vpc_id
 }
