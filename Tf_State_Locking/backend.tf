@@ -10,7 +10,7 @@ terraform {
     backend "s3" {
         bucket = "tfvedbucket"
         key = "terraform.tfstate"
-        dynamodb_table = "devopsved"
+        dynamodb_table = "devsopsved"
         region = "ap-south-1"
         profile = "configs"
         shared_credentials_files = ["/home/vedant/.aws/credentials"]
