@@ -9,8 +9,10 @@ resource "aws_instance" "my_instance" {
     instance_type=var.instance_type
     key_name=var.key_name
     vpc_security_group_ids = var.security_group_ids
+    tags = {
+      Name = "MyFirstInstance"
 
-
+    }
     provisioner "file" {
       source = "Hello.txt"
       destination="/home/ec2-user/aws/"
