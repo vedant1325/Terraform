@@ -15,14 +15,14 @@ resource "aws_instance" "my_instance" {
     }
     provisioner "file" {
       source = "Hello.txt"
-      destination="/home/ubuntu/aws/"
+      destination="/home/ec2-user/aws/"
     }
    provisioner "local-exec" {
     command = "echo ${self.private_ip} >> private_ips.txt"
   }
   connection {
     type        = "ssh"
-    user        = "ubuntu"
+    user        = "ec2-user"
     private_key = file("${path.module}/serverkp.pem")
     host        = self.public_ip
   }
