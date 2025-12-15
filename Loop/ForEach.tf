@@ -17,3 +17,9 @@ variable "imageid"{
 default = ["ami-05f991c49d264708f", "ami-0987e9d53da324257"]
 
 }
+output "aws_ec2" {
+  value = [
+    for amiid in var.imageid :
+    aws_instance.my_server[amiid].public_ip
+  ]
+}
